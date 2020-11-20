@@ -44,8 +44,9 @@ async def schedule_incident_purge(msgid: int):
 
 async def raid_summary(g: Guild, members: Set[Member]):
     channel: TextChannel = g.system_channel
-    msg = 'the following users joined during a potential raid:\n'
-    msg += 'react to this message with ✅ to ban them'
+    msg = f'{len(members)} people in a potential raid.\n'
+    msg += 'react to this message with ✅ to ban them.\n'
+    msg += 'this only works if you have the permission to ban people.'
 
     res: Message = await channel.send(msg)
     task = asyncio.create_task(schedule_incident_purge(res.id))
