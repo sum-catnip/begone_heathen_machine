@@ -98,7 +98,7 @@ async def on_member_join(m: Member):
     ctx.members.add(m)
     reschedule_reset(m.guild, ctx)
     if ctx.panic: await boot(m)
-    elif(len(ctx.members) >= cfg['threshhold']):
+    elif(len(ctx.members) >= cfg['threshold']):
         ctx.panic = True
         for m in ctx.members: await boot(m)
 
