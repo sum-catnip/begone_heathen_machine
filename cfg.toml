@@ -3,6 +3,6 @@ cooldown = 20
 # how many people have to join before the cooldown expires
 threshold = 15
 message = """
-You've been automatically kicked from https://discord.gg/r2peYTT due to a potential raid. \
+You've been automatically yeeted from https://discord.gg/r2peYTT due to a potential raid. \
 Try joining the server again in about a minute :).
 """
